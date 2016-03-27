@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="org.azrul.mytodolist_MyTodoList_war_1.0-SNAPSHOT_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.azrul.todolist.Project</class>
+    <class>com.azrul.todolist..Attachment</class>
+    <class>com.azrul.todolist.com.azrul.todolist.Task</class>
+    <properties>
+      <property name="hibernate.connection.username" value="TodoList"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      <property name="hibernate.connection.password" value="1qazZAQ!"/>
+      <property name="hibernate.connection.url" value="jdbc:postgresql://localhost/TodoList"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+      <property name="hibernate.search.default.directory_provider" value="filesystem"/>
+      <property name="hibernate.search.default.indexBase" value="C:/Users/Azrul/temp/todo_lucene_indexes"/>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.current_session_context_class" value="thread"/>
+      <property name="hibernate.search.default.exclusive_index_use" value="false"/>
+      <property name="org.hibernate.envers.global_with_modified_flag " value="true"/>
+      <property name="org.hibernate.envers.audit_strategy" value="org.hibernate.envers.strategy.ValidityAuditStrategy"/>
+    </properties>
+  </persistence-unit>
+</persistence>
